@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Extension",
+  "version": "1.0",
+  "description": "Twitter extension to filter trending tags",
+  "author": "HaciKandemir",
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["scripting", "activeTab"],
+
+  "host_permissions": ["https://twitter.com/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
